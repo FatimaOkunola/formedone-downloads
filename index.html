@@ -78,16 +78,11 @@ h2{font-size:clamp(28px,4.6vw,42px);line-height:1.1;margin:10px 0 8px;letter-spa
 .step:before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--magenta));color:#fff;font-weight:700;margin-bottom:10px}
 .step b{display:block;margin-bottom:4px}
 .step span{color:var(--muted);font-size:16px}
-.careful{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:36px;display:flex;flex-wrap:wrap;gap:40px;align-items:center}
-.careful .ring{flex:0 0 auto;display:flex;align-items:center;gap:22px}
-.careful .txt{flex:1 1 360px;min-width:0}
-.ring .num{font-size:48px;font-weight:800;line-height:1;letter-spacing:-1px}
-.ring .cap{color:var(--muted);font-size:15px}
-.left{display:inline-block;margin-top:8px;background:#fff4d6;color:#6b4a00;border-radius:999px;padding:4px 14px;font-weight:600;font-size:15px}
-.ex{font-size:13px;color:var(--muted);margin-top:8px}
-ul.tick{padding:0;margin:0;list-style:none}
-ul.tick li{padding-left:28px;position:relative;margin:12px 0}
-ul.tick li:before{content:"";position:absolute;left:0;top:9px;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple))}
+.cares{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.care{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+.care:before{content:"";display:block;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple));margin-bottom:12px}
+.care b{display:block;margin-bottom:4px}
+.care span{color:var(--muted);font-size:16px}
 .dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
 .card.pick{border-color:var(--purple);box-shadow:0 0 0 2px var(--purple) inset}
@@ -172,24 +167,13 @@ footer{padding:30px 0 50px;border-top:1px solid var(--line);color:var(--muted);f
 </section>
 
 <section>
-<div class="careful">
-<div class="ring">
-<svg width="140" height="140" viewBox="0 0 140 140" role="img" aria-label="Example: 47 boxes filled, 12 left for you">
-<circle cx="70" cy="70" r="54" fill="none" stroke="var(--line)" stroke-width="14"/>
-<circle cx="70" cy="70" r="54" fill="none" stroke="#0e9f6e" stroke-width="14" stroke-linecap="round" stroke-dasharray="270 340" transform="rotate(-90 70 70)"/>
-</svg>
-<div><div class="num">47</div><div class="cap">filled for you</div><span class="left">12 left for you</span><div class="ex">Example</div></div>
-</div>
-<div class="txt">
-<h2 style="margin-top:0">Made to be careful.</h2>
-<p class="sub" style="margin-bottom:12px">A wrong answer on an immigration form can cost you time. FormedOne is built around that.</p>
-<ul class="tick">
-<li><b>Empty is better than wrong.</b> It only fills a box when it is confident the answer belongs there.</li>
-<li><b>Your saved details stay on your computer.</b> There is no online account holding your profile.</li>
-<li><b>Your answers are never overwritten.</b> What you saved is what stays saved.</li>
-<li><b>Works with IRCC PDF forms</b> such as IMM 5257, IMM 5708 and PPTC 153.</li>
-</ul>
-</div>
+<h2>Made to be careful.</h2>
+<p class="sub">A wrong answer on an immigration form can cost you time. FormedOne is built around that.</p>
+<div class="cares">
+<div class="care"><b>Empty is better than wrong.</b><span>It only fills a box when it is confident the answer belongs there.</span></div>
+<div class="care"><b>You see what it did.</b><span>Preview the pages, see which boxes were filled and which are left for you.</span></div>
+<div class="care"><b>Your answers are never overwritten.</b><span>What you saved is what stays saved.</span></div>
+<div class="care"><b>Works with IRCC PDF forms</b><span>Such as IMM 5257, IMM 5708 and PPTC 153.</span></div>
 </div>
 </section>
 
